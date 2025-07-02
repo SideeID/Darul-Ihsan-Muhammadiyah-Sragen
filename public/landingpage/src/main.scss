@@ -1,0 +1,1321 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+// $primary: #000000;
+// $secondary: #c1c7c9;
+// $danger: #eb2227;
+$tertiary: #edf6f0;
+$success: #09a64d;
+$green : #09A64D;
+$black : #000000;
+// $nav-link-color: #868686;
+// $nav-tabs-link-active-bg: #FF8A00;
+// $nav-tabs-link-active-color: white;
+// $input-border-radius: 0;
+// $btn-border-radius: 0;
+// $input-color: #9D9D9D;
+// $input-placeholder-color: #9D9D9D;
+// $input-plaintext-color: #9D9D9D;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Then add additional custom code here
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi-Variable.ttf') format('truetype'),
+    url('/assets/fonts/Satoshi-Variable.woff') format('woff'),
+    url('/assets/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+}
+
+.font-satoshi {
+  font-family: 'Satoshi', sans-serif !important;
+}
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+$screen-2xl-min: 1536px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin max-sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin max-md {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: #{$screen-2xl-min}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: $screen) {
+    @content;
+  }
+}
+
+.btn-white {
+  background-color: white !important;
+  border-radius: 100px !important;
+}
+
+.hover-card:hover {
+  transform: scale(0.95) !important;
+}
+
+.hover-card {
+  transition: 200ms;
+}
+
+.w-85 {
+  width: 85% !important;
+}
+
+.text-green {
+  color: #009B4C !important;
+}
+
+h1 {
+  margin: 0 !important;
+  font-weight: 700 !important;
+
+  @include xl {
+    font-size: 56px;
+  }
+}
+
+h2 {
+  margin: 0 !important;
+  font-weight: 700 !important;
+
+  @include md {
+    font-size: 24px;
+  }
+
+  @include xl {
+    font-size: 38px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  margin: 0 !important;
+  font-weight: 700 !important;
+
+  @include xl {
+    font-size: 30px;
+  }
+
+  @include xxl {
+    font-size: 36px;
+  }
+}
+
+h4 {
+  margin: 0 !important;
+  font-weight: 700 !important;
+  font-size: 16px;
+
+  @include xl {
+    font-size: 22px;
+  }
+}
+
+p {
+  @include xl {
+    font-size: 16px;
+  }
+}
+
+.bg-tertiary {
+  background-color: $tertiary;
+}
+
+section.hero {
+  .container {
+    .hero-pattern {
+      z-index: 0 !important;
+      width: 256px !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+
+      @include md {
+        width: 418px !important;
+        top: 10% !important;
+        right: 0% !important;
+        transform: translate(0%, 0%) !important;
+      }
+
+      @include xl {
+        width: 600px !important;
+      }
+    }
+
+    .hero-content {
+      z-index: 99 !important;
+
+      @include xl {
+        gap: 16px !important;
+      }
+
+      .selamat-datang {
+        width: 100%;
+        font-size: 12px !important;
+
+        @include md {
+          width: auto;
+        }
+
+        @include xl {
+          font-size: 18px !important;
+        }
+      }
+
+      .hero-heading {
+        font-size: 40px;
+
+        @include md {
+          font-size: 32px;
+        }
+
+        @include xl {
+          max-width: 60% !important;
+          font-size: 56px !important;
+        }
+      }
+
+      .hero-misi {
+        @include xl {
+          max-width: 30% !important;
+        }
+
+        p {
+          @include xl {
+            font-size: 16px !important;
+          }
+        }
+      }
+
+      .swiper {
+        width: 100% !important;
+        height: 300px;
+        overflow: hidden;
+
+        @include md {
+          height: 380px;
+          border-radius: 20px;
+        }
+
+        @include xxl {
+          height: 460px;
+        }
+
+        .swiper-wrapper {
+          .swiper-slide {
+            .box1 {
+              width: 50%;
+              height: 80%;
+              border-radius: 0 0 20px 20px;
+
+              @include md {
+                border-radius: 20px 20px 0px 20px;
+              }
+
+              h4 {
+                @include xl {
+                  font-size: 16px !important;
+                }
+              }
+
+              h2 {
+                @include xl {
+                  font-size: 36px !important;
+                }
+              }
+
+              a {
+                @include xl {
+                  font-size: 16px !important;
+                }
+              }
+            }
+
+            .box2 {
+              width: 70%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              right: 0;
+              z-index: -1;
+              overflow: hidden;
+              border-radius: 20px 20px 0 0;
+
+              @include md {
+                border-radius: 20px;
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section.about {
+  .container {
+    .row1 {
+      .box-green {
+        width: 100%;
+
+        @include xl {
+          width: 445px !important;
+          height: 400px !important;
+        }
+
+        img {
+          width: 100%;
+
+          @include xl {
+            width: 317px !important;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 32px;
+      }
+    }
+
+    .row2 {
+
+      .col-koin,
+      .col-people {
+        border-bottom: 1px solid #e9e9e9 !important;
+
+        @include md {
+          border-bottom: 0px solid #e9e9e9 !important;
+          border-right: 1px solid #e9e9e9 !important;
+        }
+      }
+
+      .icon-container {
+        img {
+          @include xl {
+            width: 28px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.ads {
+  .mySwiper2 {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+
+    .swiper-button-prev {
+      position: absolute;
+      transform: translateY(50%) !important;
+      bottom: 50% !important;
+      left: 36px;
+      background-image: url('/assets/icons/arrow-left.svg') !important;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+
+      @include xl {
+        width: 52px;
+      }
+    }
+
+    .swiper-button-next {
+      position: absolute;
+      transform: translateY(50%) !important;
+      bottom: 0px !important;
+      left: 120px;
+      background-image: url('/assets/icons/arrow-right.svg') !important;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+
+      @include xl {
+        width: 52px;
+      }
+    }
+
+    .swiper-button-next::after {
+      display: none;
+    }
+
+    .swiper-button-prev::after {
+      display: none;
+    }
+
+    .swiper-pagination {
+      width: 100%;
+      display: flex;
+      padding: 0 36px;
+      padding-bottom: 16px;
+
+      .swiper-pagination-bullet {
+        width: auto;
+        height: 6px;
+        flex-grow: 1;
+        opacity: 1;
+        background: rgba(190, 190, 190, 0.7);
+        border-radius: 100px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+}
+
+section.member {
+  .container {
+    @include xl {
+      padding-top: 112px !important;
+      padding-bottom: 112px !important;
+    }
+
+    .mySwiper3 {
+      width: 100%;
+      height: auto;
+      overflow-y: visible !important;
+      position: relative;
+      @include max-sm {
+        display: none !important;
+      }
+
+      .swiper-btn {
+        .swiper-button-prev, .swiper-button-next {
+          top: -15%;
+        }
+        .swiper-button-prev::after, .swiper-button-next::after {
+          display: none;
+        }
+        .swiper-button-prev {
+          right: var(--swiper-navigation-sides-offset,150px) !important;
+          left: auto !important;
+          border: 1px solid white;
+          padding-left: 2.5rem !important;
+          padding-right: 2.5rem !important;
+        }
+        .swiper-button-next {
+          right: var(--swiper-navigation-sides-offset,10px) !important;
+          left: auto !important;
+          padding-left: 3.5rem;
+          padding-right: 3.5rem;
+        }
+      }
+    }
+    .mySwiper3-mobile {
+      @include max-sm {
+        display: block !important;
+      }
+      .btn-more {
+        background-color: #078D41;
+      }
+    }
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+section.cta {
+  max-width: 1440px !important;
+
+  .box1 {
+    width: 100%;
+    height: 420px;
+
+    @include md {
+      width: 60%;
+      height: 740px;
+    }
+
+    @include xxl {
+      padding: 64px 64px !important;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      @include md {
+        font-size: 40px;
+      }
+
+      @include xxl {
+        font-size: 60px;
+      }
+    }
+  }
+
+  .box2 {
+    width: 100%;
+    height: 620px;
+
+    @include md {
+      width: 40%;
+      height: 740px;
+    }
+
+    img {
+      z-index: 0 !important;
+    }
+
+    img.coin {
+      animation: up-down 1s ease-in-out infinite alternate-reverse both !important;
+      width: 320px;
+
+      @include xl {
+        width: 300px;
+      }
+    }
+
+    .desc {
+      z-index: 1 !important;
+    }
+  }
+}
+
+section.tangklet {
+  .container {
+    .box1 {
+      width: 100%;
+
+      @include md {
+        width: 50%;
+      }
+    }
+
+    .box2 {
+      width: 100%;
+
+      @include md {
+        width: 50%;
+      }
+
+      .mySwiper4 {
+        width: 100%;
+        // height: 300px;
+        height: 100%;
+        @include max-md {
+          height: 300px;
+        }
+
+        .swiper-slide {
+          .img-container {
+            width: 56px;
+            height: 56px;
+          }
+        }
+
+        .swiper-pagination {
+          text-align: left;
+          padding-left: 25px;
+          padding-bottom: 20px;
+
+          @include max-md {
+            padding-bottom: 10px;
+          }
+        }
+        
+
+        .swiper-pagination-bullet-active {
+          background-color: #009B4C !important;
+        }
+      }
+    }
+  }
+}
+
+section.media {
+
+  .container {
+    @include max-sm {
+      padding-left: 25px !important;
+      padding-right: 25px !important;
+    }
+
+    .pojok-title {
+      @include max-sm {
+        padding-bottom: 10px !important;
+      }
+    }
+
+    .media-small-container {
+      @include max-sm {
+        padding-right: 0 !important;
+      }
+
+      .media-small-card:hover {
+        transform: scale(0.95);
+        transition-duration: 400ms;
+        cursor: pointer;
+      }
+
+      .media-small-card {
+        .media-title {
+          -webkit-line-clamp: 2 !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          display: -webkit-box !important;
+          -webkit-box-orient: vertical !important;
+        }
+      }
+    }
+
+    .media-big-card:hover img {
+      transform: scale(1.2);
+      transition-duration: 500ms;
+      cursor: pointer;
+    }
+
+    .media-big-card {
+      @include max-sm {
+        transform: scale(0.87);
+      }
+
+      .black-overlay {
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 75vh;
+        background: linear-gradient(180deg, rgba(47, 47, 47, 0) 0%, rgba(0, 0, 0, 1) 90%);
+
+        @include max-md {
+          height: 35vh;
+        }
+
+        @include max-sm {
+          height: 38vh;
+        }
+
+        .media-big-card-text {
+          left: 3rem;
+          right: 3rem;
+          bottom: 40%;
+
+          @include max-md {
+            bottom: 45%;
+          }
+
+          @include max-sm {
+            bottom: 20%;
+          }
+
+          .media-title {
+            @include max-md {
+              font-size: 1.5rem;
+              ;
+            }
+          }
+
+          .media-btn {
+            @include max-sm {
+              display: inline-block !important;
+              background-color: white !important;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+}
+
+section.event {
+  .container {
+    @include max-sm {
+      padding-left: 25px !important;
+      padding-right: 25px !important;
+    }
+
+    .event-title-container {
+      background-color: $green;
+      color: white;
+
+      @include max-sm {
+        margin-bottom: 30px !important;
+      }
+
+      .event-date-container {
+        font-size: 5.64px !important;
+        gap: 0.25rem !important;
+        margin-bottom: 10px !important;
+
+        .event-logo {
+          width: 12px;
+        }
+
+        .event-dot {
+          width: 3px;
+        }
+      }
+
+      .event-title {
+        line-height: 44px;
+        width: 80%;
+
+        @include max-md {
+          font-size: 1.5rem;
+          line-height: 35px;
+          width: 90%;
+        }
+
+        @include max-sm {
+          font-size: 12.9px;
+          line-height: 20px;
+          width: 100%;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    .event-big-card:hover {
+      transform: scale(0.98);
+      transition-duration: 200ms;
+      cursor: pointer;
+    }
+
+    .event-small-card:hover {
+      transform: scale(0.95);
+      transition-duration: 400ms;
+      cursor: pointer;
+    }
+
+    .event-ads1 {
+      @include max-sm {
+        margin-bottom: 35px !important;
+      }
+    }
+  }
+}
+
+section.article {
+  background-color: #F6F6F6;
+
+  .container {
+    @include max-sm {
+      padding-left: 25px !important;
+      padding-right: 25px !important;
+      padding-bottom: 100px !important;
+    }
+
+    .artikel-berita {
+      @include max-sm {
+        margin-top: 0 !important;
+      }
+    }
+
+    .article-card-berita {
+      margin-top: 5rem;
+      flex: 1;
+      width: 100%;
+
+      @include max-md {
+        margin-top: 2.5rem;
+      }
+
+      .artikel-berita-img {
+        @include max-sm {
+          margin-bottom: 15px;
+        }
+      }
+
+      .artikel-berita-tanggal {
+        @include max-md {
+          margin-bottom: 10px !important;
+        }
+      }
+
+      .artikel-berita-title {
+        -webkit-line-clamp: 3 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+
+        @include max-md {
+          margin-bottom: 8px !important;
+        }
+
+        @include max-sm {
+          font-size: 20px;
+        }
+      }
+
+      .artikel-berita-sub {
+        -webkit-line-clamp: 4 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+
+        @include max-md {
+          -webkit-line-clamp: 2 !important;
+        }
+
+        @include max-sm {
+          -webkit-line-clamp: 5 !important;
+        }
+      }
+    }
+
+    .kolom-opini {
+      @include max-sm {
+        margin-top: 100px !important;
+        margin-bottom: 20px !important;
+      }
+    }
+
+    .artikel-opini-card {
+      border: 1px solid #E9E9E9;
+      padding: 30px;
+
+      .artikel-opini-date {
+        @include max-sm {
+          font-size: 12px !important;
+          margin-bottom: 15px !important;
+        }
+      }
+
+      .artikel-opini-title {
+        -webkit-line-clamp: 2 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+
+        @include max-sm {
+          font-size: 20px !important;
+        }
+      }
+
+      .artikel-opini-title:hover {
+        color: #0000FF;
+      }
+    }
+
+  }
+
+}
+
+footer {
+  background-color: $black;
+
+  .container {
+    @include max-sm {
+      padding-left: 25px !important;
+      padding-right: 25px !important;
+    }
+
+    .footer-content-container {
+      @include max-sm {
+        flex-direction: column;
+      }
+
+      .footer-title {
+        width: 40%;
+
+        @include max-sm {
+        width: 100%;
+        }
+
+        @include max-sm {
+          margin-bottom: 50px;
+        }
+
+        .footer-sub {
+          width: 80%;
+          line-height: 32px;
+
+          @include max-sm {
+            width: 100%;
+          }
+        }
+      }
+
+      .footer-left {
+        @include max-sm {
+          flex-direction: column !important;
+        }
+      }
+
+      .footer-menu {
+        margin-top: 80px !important;
+        @include max-sm {
+          margin-top: 0px !important;
+          margin-bottom: 40px !important;
+        }
+
+        .footer-menu-content {
+          margin-right: 7rem !important;
+          @include max-md {
+            margin-right: 0rem !important;
+          }
+        }
+      }
+
+
+    }
+
+    .footer-copy-container {
+      @include max-sm {
+        flex-direction: column;
+        align-items: start !important;
+      }
+
+      .copy {
+        color: rgba(255, 255, 255, 0.5) !important;
+
+        @include max-sm {
+          margin-bottom: 30px !important;
+        }
+      }
+
+      .urunan-footer-btn {
+        border: 1px solid white;
+      }
+    }
+
+  }
+
+}
+
+// PAGE KOIN NUSANTARA
+section.koin-hero {
+  @include max-sm {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .hero-container {
+    @include max-sm {
+      margin-top: 0 !important;
+    }
+  }
+
+  .koin-hero-title {
+    @include max-sm {
+      font-size: 30px !important;
+      margin-bottom: 0px !important;
+    }
+  }
+
+  .koin-img-container {
+    transform: translateY(-6vh);
+
+    @include max-md {
+      transform: translateY(-3vh);
+    }
+
+    @include max-sm {
+      transform: translateY(0vh);
+    }
+
+    .koin-hero-img {
+      width: 65%;
+      animation: up-down 1s ease-in-out infinite alternate-reverse both !important;
+
+      @include max-md {
+        width: 80%;
+      }
+
+      @include max-sm {
+        width: 90%;
+      }
+    }
+
+    .koin-hero-btn-container {
+      @include max-md {
+        flex-direction: column;
+      }
+
+      .btn-galang {
+        background-color: #078D41;
+        padding: 16px 30px !important;
+
+        @include max-md {
+          margin-right: 0px !important;
+          margin-bottom: 15px;
+        }
+      }
+
+      .btn-urunan {
+        border: 1px solid #009B4C;
+        padding: 8px 30px !important;
+      }
+    }
+  }
+}
+
+section.koin-list-donasi {
+  @include max-sm {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .koin-donasi-title-container {
+    @include max-sm {
+      flex-direction: column;
+    }
+
+    .koin-donasi-title {
+      @include max-sm {
+        margin-bottom: 20px !important;
+        font-size: 28px;
+      }
+    }
+
+  }
+
+  .koin-donasi-filter-container {
+    @include max-sm {
+      flex-direction: column;
+      align-items: start !important;
+      margin-bottom: 10px !important;
+    }
+
+    .dropdown {
+      @include max-sm {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .verify-text {
+    font-size: 14px;
+  }
+
+  .card {
+    transition: 300ms;
+    text-decoration: none !important;
+  }
+  .card:hover {
+    transform: scale(0.95);
+  }
+}
+// PAGE KOIN NUSANTARA END
+
+// PAGE KOIN DETAIL
+section.koin-detail-content {
+  @include max-sm {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .koin-detail-left-content {
+    @include max-md {
+      margin-bottom: 3rem !important;
+    }
+  }
+
+  .carousel-indicators {
+    position: relative !important;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: transparent !important;
+    height: fit-content !important;
+    width: 6.25rem !important;
+    border-radius: 15px !important;
+    @include max-sm {
+      width: 5rem !important;
+    }
+  }
+
+  .koin-detail-urunan-btn {
+    background-color: #078D41;
+  }
+
+  .accordion-button {
+    background-color: #EDF6F0 !important;
+  }
+
+  .accordion-body {
+    max-height: 325px !important;
+    overflow-x: hidden;
+    @include max-sm {
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+    }
+
+    .nama-donatur-container p {
+      @include max-sm {
+        font-size: 14px !important;
+      }
+    }
+    .donatur-nominal {
+      color: #009B4C;
+    }
+    .tanggal-donasi {
+      @include max-sm {
+        font-size: 9px !important;
+        margin-top: 4px !important;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 16px;
+    border-radius: 10px;
+    @include max-sm {
+      width: 8px;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #F0F0F0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #B3B3B3;
+  }
+
+  .accordion-footer {
+    background-color: #FFE81E !important;
+  }
+
+
+}
+// PAGE KOIN DETAIL END
+
+// PAGE NDEREK TANGLET
+section.tanglet-hero {
+  @include max-sm {
+    padding: 2rem 15px 5rem 15px !important;
+  }
+
+  .tanglet-hero-title {
+    width: 60% !important;
+
+    @include max-sm {
+      font-size: 35px !important;
+      width: 100% !important;
+      margin-top: 1.25rem !important;
+      margin-bottom: 4rem !important;
+    }
+  }
+
+  .tanglet-hero-sub {
+    color: #009B4C;
+  }
+
+  .tanglet-hero-btn-container {
+    @include max-sm {
+      flex-direction: column;
+    }
+
+    .tanglet-btn-pertanyaan {
+      background-color: #078D41;
+
+      @include max-sm {
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+      }
+    }
+  }
+}
+
+section.tanglet-diskusi {
+  @include max-sm {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .tanglet-diskusi-title {
+    @include max-sm {
+      font-size: 28px !important;
+    }
+  }
+
+  .tanglet-diskusi-container {
+    @include max-sm {
+      margin-bottom: 4rem !important;
+    }
+  }
+
+  .tanglet-diskusi-card {
+
+    .tanglet-diskusi-profil {
+      @include max-sm {
+        margin-right: 8px !important;
+      }
+    }
+
+    .tanglet-diskusi-card-title {
+      width: 60%;
+
+      @include max-sm {
+        font-size: 20px !important;
+        -webkit-line-clamp: 2 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+      }
+    }
+
+    .tanglet-diskusi-card-sub p {
+      @include max-sm {
+        font-size: 14px !important;
+        margin: 0 !important;
+        margin-bottom: 5px !important;
+      }
+    }
+
+    .tanglet-artikel-tanggal span {
+      @include max-sm {
+        font-size: 12px !important;
+      }
+    }
+
+    .tanglet-artikel-tanggal img {
+      @include max-sm {
+        width: 10px;
+      }
+    }
+
+    .tanglet-diskusi-ustad {
+      color: #009B4C;
+    }
+
+    .tanglet-diskusi-jawab {
+      -webkit-line-clamp: 2 !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical !important;
+    }
+
+  }
+
+  .tanglet-artikel {
+    @include max-sm {
+      font-size: 28px !important;
+      margin-bottom: 1.75rem !important;
+    }
+  }
+
+  .tanglet-artikel-card {
+    border-left: 1px solid #E9E9E9;
+    border-bottom: 1px solid #E9E9E9;
+
+    .artikel-berita-tanggal p {
+      font-size: 12px !important;
+    }
+
+    .tanglet-artikel-title {
+      -webkit-line-clamp: 2 !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical !important;
+    }
+
+    .tanglet-artikel-title:hover {
+      color: #0000FF;
+    }
+  }
+
+}
+// PAGE NDEREK TANGLET END
+
+// PAGE TANGLET DETAIL
+section.tanglet-diskusi {
+  .tanglet-detail-title {
+    line-height: 32px;
+
+    @include max-md {
+      line-height: 20px;
+    }
+  }
+
+  .tanglet-detail-pertanyaan-container {
+    @include max-sm {
+      flex-direction: column !important;
+    }
+  }
+
+  .tanglet-detail-pertanyaan p {
+    @include max-md {
+      width: 100% !important;
+    }
+  }
+}
+// PAGE TANGLET DETAIL END
