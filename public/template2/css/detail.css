@@ -1,0 +1,49 @@
+.detail-berita-title {
+    font-size: 32px !important;
+    font-weight: 700;
+}
+
+.detail-berita-admin-date {
+    color: #272727;
+    font-size: 14px !important;
+    font-weight: 500;
+}
+
+.detail-berita-img {
+    object-fit: cover !important;
+    width: 100%;
+    height: 400px;
+}
+
+.detail-berita-text {
+    font-size: 18px !important;
+}
+
+/* ==================== MOBILE ==================== */
+@media (min-width: 320px) and (max-width: 767px) {
+    /* ---------------- detail-berita ---------------- */
+    #detail-berita {
+        padding: 40px 5px !important;
+    }
+    .detail-berita-title {
+        font-size: 22px !important;
+    }
+    .detail-berita-text {
+        font-size: 14px !important;
+    }
+    .detail-berita-img {
+        height: 200px;
+    }
+    .detail-berita-admin-date {
+        font-size: 12px !important;
+    }
+    #detail-berita .kembali-btn {
+        font-size: 15px !important;
+    }
+    #detail-berita .kembali-btn span {
+        min-width: 12px !important;
+    }
+    /* ---------------- detail-berita end ---------------- */
+}
+
+/* ==================== MOBILE END ==================== */

@@ -1,0 +1,119 @@
+/* button */
+.btn {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px;
+    border-radius: 8px;
+    letter-spacing: 0.01em;
+}
+.btn-danger {
+    border-color: #e43631 !important;
+    background: #e43631 !important;
+    color: #ffffff !important;
+}
+.btn-success {
+    border-color: #00923f !important;
+    background: #00923f !important;
+    color: #ffffff !important;
+}
+.btn-warning {
+    border-color: #f39649 !important;
+    background: #f39649 !important;
+    color: #ffffff !important;
+}
+.btn-tertiary {
+    border-color: #e5fcf2 !important;
+    background: #e5fcf2 !important;
+    color: #00923f !important;
+}
+.btn-primary {
+    border-color: #0038FE !important;
+    background: #0038FE !important;
+    color: #ffffff !important;
+}
+.btn-secondary {
+    border-color: #e6e6e6 !important;
+    background: #e6e6e6 !important;
+    color: #9d9ea2 !important;
+}
+.btn-black {
+    border-color: #151619 !important;
+    background: #151619 !important;
+    color: #ffffff !important;
+}
+.btn-outline-danger {
+    border-color: #eeb4b0 !important;
+    background: #ffffff !important;
+    color: #cb3a31 !important;
+}
+.btn-outline-danger:hover {
+    background: #fff4f2 !important;
+}
+.btn-outline-success {
+    border-color: #aadbbf !important;
+    background: #ffffff !important;
+    color: #00923f !important;
+}
+.btn-outline-success:hover {
+    background: #f5fff9 !important;
+}
+.btn-outline-warning {
+    border-color: #fdeac1 !important;
+    background: #ffffff !important;
+    color: #f8c146 !important;
+}
+.btn-outline-warning:hover {
+    background: #fffcf5 !important;
+}
+.btn-outline-black {
+    border-color: #39434d !important;
+    background: #ffffff !important;
+    color: #39434d !important;
+}
+.btn-outline-black :hover {
+    background: #fffcf5 !important;
+}
+
+/* .btn-tambah {
+    padding: 8px 21px;
+}
+.btn-simpan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-simpan img {
+    margin-right: 12px;
+}
+.btn-cancel,
+.btn-cancel:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fcebea;
+    border-color: #fcebea;
+    color: #a22623;
+}
+.btn-cancel img {
+    margin-right: 12px;
+}
+.btn-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-delete img {
+    margin-right: 12px;
+}
+.btn-send {
+    border-radius: 4px;
+    width: 44px;
+    height: 44px;
+} */
+
+@media (max-width: 576px) {
+    .btn-tambah {
+        width: 100%;
+    }
+}

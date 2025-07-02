@@ -1,0 +1,905 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+}
+
+/* LANDING PAGE */
+
+/* sosmed */
+#sosmed {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+.sosmed h3 a {
+    margin: 0;
+    padding: 0px;
+}
+
+.sosmed h3 {
+    font-size: 1.5em;
+}
+
+.sosmed a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+}
+
+.sosmed a:hover {
+    text-decoration: none;
+}
+
+.sosmed .gambar .row {
+    margin-top: 50px;
+    padding-top: 0px;
+    padding-inline: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.sosmed .container-gambar .card {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    box-shadow: none;
+    max-width: 270px;
+}
+
+.sosmed .container-gambar {
+    display: flex;
+    justify-content: between !important;
+    width: 100%;
+}
+
+.sosmed .card {
+    padding: 0px;
+    border-radius: 7%;
+    border: none;
+    background: #ffffff;
+}
+
+.sosmed .card-body {
+    position: relative;
+    padding-top: 13px;
+    padding-left: 0px;
+    padding-right: 0;
+    max-height: 150px;
+}
+
+.img-sosmed {
+    object-fit: cover;
+}
+
+.sosmed .card-body a,
+.sosmed .content2 .card-body a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: #080e1e;
+    text-align: left;
+    align-items: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sosmed .card-body a:hover {
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+
+.sosmed .card-body img {
+    margin-right: 5px;
+}
+
+.more-btn-sosmed {
+    color: #1763d3 !important;
+    font-weight: 600 !important;
+}
+
+/* video */
+
+.content2 .video-wrapper {
+    gap: 25px;
+}
+
+.content2 .card {
+    box-shadow: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.content2 .ytvideo {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.content2 .ytshort {
+    aspect-ratio: 9 / 16;
+    width: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.content2 .card-body {
+    margin-left: 0;
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+.content2 .card-body a {
+    display: flex;
+    align-items: left;
+    text-decoration: none;
+    color: #000;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content2 .card-body img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: none;
+    padding: 0;
+}
+
+/* map */
+#map .peta {
+    height: 550px;
+}
+#map {
+    padding-top: 50px;
+}
+
+.card-map {
+    position: absolute;
+    top: -15px;
+    left: -20px;
+    max-width: 400px;
+    transform: scale(0.8);
+    box-shadow: 1px 1px 3px 0px #0000001a;
+}
+
+.btn-map {
+    background-color: #f9bf39 !important;
+    border-radius: 6px !important;
+    width: 100%;
+    font-weight: 600;
+}
+
+/* responsive landingpage content3 */
+@media (max-width: 2536px) {
+    .img-sosmed {
+        height: 255px;
+        object-fit: cover;
+        width: 255px;
+    }
+
+    /* video */
+    .content2 .video-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Jarak antara video */
+    }
+
+    .content2 .ytvideo {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: 460px;
+        object-fit: cover;
+        border-radius: 3%;
+    }
+
+    .content2 .ytshort {
+        aspect-ratio: 9 / 16;
+        width: auto;
+        height: 460px;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+
+    /* peta */
+}
+
+@media (max-width: 350px) {
+    .sosmed .container {
+        display: flex;
+        flex-direction: row; /* Agar heading dan link 'Lihat semua' vertikal */
+        align-items: center;
+        padding-top: 30px 10px;
+    }
+
+    .sosmed .col-md-3 {
+        display: flex;
+        justify-content: center;
+        width: 90%; /* Ubah lebar card untuk menyesuaikan layar kecil */
+        margin-bottom: 10px;
+    }
+
+    .sosmed .card {
+        width: 100%; /* Membuat card menyesuaikan lebar kontainer */
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .img-sosmed {
+        height: auto; /* Mengatur gambar agar sesuai proporsi */
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .sosmed .card-body {
+        text-align: left;
+        padding-top: 10px;
+    }
+
+    .sosmed h3 {
+        font-size: 1.2em; /* Ukuran teks heading lebih kecil */
+    }
+
+    .sosmed a {
+        justify-content: left;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* video */
+    .content2 {
+        margin-bottom: 100px;
+    }
+    .content2 .video-wrapper {
+        display: flex;
+        justify-content: between;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .content2 .ytvideo {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 3%;
+    }
+
+    .content2 .ytshort {
+        aspect-ratio: 9 / 16;
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+
+    /* map */
+    .content3 {
+        margin-top: 100px;
+    }
+    .content3 .container {
+        position: relative;
+        margin-top: 250px;
+        margin-bottom: 250px;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;
+        width: 300px;
+        height: 150px;
+    }
+}
+
+/* PROFILE PAGE */
+
+/* profil */
+
+.content-profil {
+    margin-top: 60px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 80px;
+}
+
+@media (min-width: 1025px) {
+    .content-profil {
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .content-profil {
+        margin-left: 90px !important;
+        margin-right: 80px !important;
+    }
+}
+
+/* Tentang Kami */
+
+.content-profil .row-judul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.tentang-kami-logo-title {
+    font-size: 28px !important;
+    font-weight: 800 !important;
+}
+
+.content-profil .logo-smp {
+    max-width: 150px;
+    margin-right: 25px;
+}
+
+.content-profil h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.content-profil .row-paragraf {
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+
+.content-profil .row-paragraf p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.content-profil .row-visi {
+    margin-top: 60px;
+}
+
+.content-profil .row-visi h4 {
+    margin-top: 60px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.content-profil .row-visi p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.content-profil .misi ol li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.content-profil .row-visi2 p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #080e1e;
+}
+
+.content-profil .row-visi2,
+.content-profil .row-intelek {
+    margin-bottom: 10px;
+}
+
+.content-profil .row-visi2 .subjudul {
+    font-size: 16px;
+    font-weight: 700;
+    color: #182856 !important;
+}
+
+.content-profil .row-intelek .subjudul2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: #080e1e;
+}
+
+.content-profil .row-intelek li {
+    font-size: 16px;
+    color: #080e1e;
+}
+
+.content-profil .row-visi li {
+    font-size: 18px;
+}
+
+.content-profil hr {
+    margin-top: 70px;
+}
+
+.content-profil .row-next {
+    display: flex; /* Mengatur elemen menjadi flex container */
+    margin-top: 30px; /* Jarak antara elemen row-visi2 */
+}
+
+.content-profil .row-next .next-a {
+    flex: 0 0 60%; /* Lebar tetap 20% */
+    max-width: 60%; /* Lebar maksimum 20% */
+    align-items: flex-start; /* Menyelaraskan item pada awal kontainer */
+    text-decoration: 0;
+    color: #000000;
+    font-size: 16px;
+}
+
+.content-profil .row-next a {
+    align-items: center;
+}
+
+.content-profil .row-next .next-h {
+    flex: 0 0 40%; /* Lebar tetap 20% */
+    max-width: 40%; /* Lebar maksimum 20% */
+    color: #000000;
+    text-align: end;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-profil .row-paragraf p {
+        font-size: 16px;
+    }
+
+    .content-profil .row-visi {
+        margin-top: 60px;
+    }
+
+    .content-profil .row-visi h4 {
+        margin-top: 60px;
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .content-profil .row-visi p {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .content-profil .misi ol li {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .content-profil .row-visi2 p {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .content-profil .row-visi2 {
+        margin-bottom: 0px;
+    }
+
+    .content-profil .row-visi2 .subjudul {
+        font-size: 14px;
+    }
+
+    .content-profil .row-intelek .subjudul2 {
+        font-size: 14px;
+    }
+
+    .content-profil .row-intelek li {
+        font-size: 14px;
+    }
+
+    .content-profil .row-visi li {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .tentang-kami-logo-title {
+        font-size: 20px !important;
+        font-weight: 700 !important;
+    }
+
+    .content-profil .logo-smp {
+        max-width: 65px;
+        margin-right: 15px;
+    }
+
+    .content-profil .row-visi2,
+    .content-profil .row-intelek {
+        margin-bottom: 25px !important;
+        margin-top: 25px !important;
+    }
+}
+
+/* Core Value */
+
+.content-profil .row-qudwah h4 {
+    margin-bottom: 0px;
+}
+
+.content-profil .row-qudwah p {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.content-profil .row-qudwah .qudwah p {
+    margin-bottom: 0px;
+}
+
+.content-profil .row-qudwah .qudwahlist {
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .content-profil .row-qudwah p {
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+}
+
+.content-profil .nextpage {
+    margin-top: 50px;
+}
+
+.content-profil .nextpage1 {
+    margin-top: 100px;
+}
+
+.content-profil .nextpage2 {
+    margin-top: 170px;
+}
+
+.content-profil .row-next1 {
+    display: flex; /* Mengatur elemen menjadi flex container */
+    margin-top: 30px;
+}
+
+.content-profil .row-next1 .next-a {
+    flex: 0 0 80%; /* Lebar tetap 20% */
+    max-width: 80%; /* Lebar maksimum 20% */
+    align-items: flex-start; /* Menyelaraskan item pada awal kontainer */
+    text-decoration: 0;
+    color: #000000;
+    font-size: 16px;
+}
+
+.content-profil .row-next1 a {
+    align-items: center;
+}
+
+.content-profil .row-next1 .next-h {
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.content-profil .row-next1 h4 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* navbar-core */
+.navcore {
+    width: 100%;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px #e6e6e8 solid;
+    display: flex;
+    justify-content: space-between; /* Membuat elemen tersebar dengan jarak di antara mereka */
+    align-items: center; /* Pastikan item vertikal rata */
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+.navcore .nav-isi {
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navcore .nav-isi-text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.6px;
+}
+
+.navcore .nav-isi.active {
+    background-color: #3c7b46; /* Warna hijau */
+    color: white;
+}
+
+.navcore .nav-isi.active:hover {
+    background-color: #3c7b46; /* Tidak berubah warna saat dihover */
+    color: white; /* Teks tetap putih */
+}
+
+.navcore .nav-isi:hover {
+    background-color: #3c7b4645; /* Warna hijau */
+}
+
+.navcore .nav-isi:hover a {
+    color: #1e1f24;
+}
+
+.navcore .nav-isi.active a {
+    color: white; /* Pastikan teks juga berubah warna */
+}
+
+.navcore .nav-isi a {
+    text-decoration: none;
+    color: #5a5f6d;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navcore .nav-isi-text {
+        font-size: 12px;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .navcore {
+        border: none !important;
+    }
+    .nav-core-container {
+        display: flex !important;
+        max-width: 90vw !important;
+        overflow: scroll !important;
+    }
+
+    .nav-core-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-core-container {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .nav-core-container .nav-isi-text {
+        white-space: nowrap !important;
+    }
+    .nav-core-container .nav-isi {
+        margin-right: 5px !important;
+    }
+
+    .qudwahlist {
+        font-size: 14px !important;
+    }
+
+    .content-profil .nextpage1 {
+        margin-top: 50px !important;
+    }
+}
+
+/* Logo */
+.content-profil .row-logo {
+    margin-top: 50px;
+    display: flex;
+    align-items: column;
+}
+
+.content-profil .row-logo .col {
+    align-items: center;
+}
+
+.content-profil .row-logo button {
+    margin-top: 12px;
+    border-radius: 7%;
+    border: none;
+    background-color: #e6e6e8;
+    justify-content: center;
+    align-items: center;
+    color: #182856;
+    padding: 10px 10px;
+}
+
+.content-profil .row-logo h5 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.content-profil .row-logo button:hover {
+    background-color: #cecece;
+}
+
+.content-profil .row-logo .unduh {
+    margin-right: 7px;
+}
+
+.logo-unduh-btn {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #182856;
+    font-weight: 500;
+}
+
+@media (max-width: 360px) {
+    .content-profil {
+        margin-top: 60px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 80px;
+    }
+
+    /* Tentang Kami */
+    .content-profil .logo-smp {
+        max-width: 80px;
+        margin-right: 10px;
+    }
+
+    .content-profil h2 {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content-profil .row-visi2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-profil .row-visi2 .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .content-profil .row-visi2 .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .content-profil .row-visi2 .subjudul {
+        margin-bottom: 5px;
+    }
+
+    /* Logo */
+    .content-profil .row-logo {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .content-profil .nextpage2 {
+        margin-top: 100px;
+    }
+
+    /* .content-profil .row-visi2 .col-md-2 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .content-profil .row-visi2 .col-md-8 {
+        flex: 0 0 60%;
+        max-width: 60%;
+        padding-right: 20px;
+    }
+
+    .content-profil .row-visi2 p{
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #080E1E;
+    } */
+}
+
+/* ==================== RESOPONSIVE LANDING ==================== */
+
+/* ==================== TABLET ==================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* ---------------- sosmed ---------------- */
+    .img-sosmed {
+        width: 255px !important;
+        height: 255px !important;
+    }
+    .container-gambar > :last-child {
+        display: none !important;
+    }
+    .container-gambar {
+        gap: 15px !important;
+    }
+    .content2 .vid-card {
+        height: 100% !important;
+    }
+    .content2 .ytshort,
+    .content2 .ytvideo {
+        height: 250px !important;
+    }
+    .sosmed .card-body a,
+    .sosmed .content2 .card-body a {
+        font-size: 12px;
+    }
+    .sosmed .card-body img,
+    .sosmed .content2 .card-body img {
+        width: 20px;
+        height: 20px;
+    }
+    /* ---------------- sosmed END ---------------- */
+
+    /* map */
+    #map {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    /* map end */
+}
+
+/* ==================== TABLET END ==================== */
+
+/* ==================== MOBILE ==================== */
+@media (min-width: 320px) and (max-width: 767px) {
+    /* ---------------- sosmed ---------------- */
+    .sosmed {
+        overflow: hidden !important;
+    }
+    .img-sosmed {
+        width: 230px !important;
+        height: 200px !important;
+        border-radius: 8px !important;
+    }
+    .container-gambar {
+        overflow-x: scroll !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+    .container-gambar .card {
+        display: block !important;
+        min-width: 220px !important;
+        margin-right: 10px !important;
+        flex: 0 0 auto;
+    }
+    .container-gambar::-webkit-scrollbar {
+        display: none;
+    }
+    .container-gambar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .content2 .vid-card {
+        height: 100% !important;
+    }
+    .content2 .ytshort,
+    .content2 .ytvideo {
+        height: auto !important;
+    }
+    .sosmed .card-body a,
+    .sosmed .content2 .card-body a {
+        font-size: 12px;
+    }
+    .sosmed .card-body img,
+    .sosmed .content2 .card-body img {
+        width: 20px;
+        height: 20px;
+    }
+    .more-btn-sosmed {
+        display: none !important;
+    }
+    .more-btn-sosmed-mobile {
+        display: block !important;
+        color: #1763d3 !important;
+        font-weight: 600 !important;
+    }
+    /* ---------------- sosmed END ---------------- */
+
+    /* map */
+    #map {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    /* map end */
+}
+
+/* ==================== MOBILE END ==================== */
+
+/* ==================== RESOPONSIVE LANDING END ==================== */

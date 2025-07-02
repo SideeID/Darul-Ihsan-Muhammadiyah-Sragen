@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Style slider ekstrakurikuler */
+
+#ekstrakurikuler {
+    padding-bottom: 160px !important;
+}
+#ekstrakurikuler .carousel-controls {
+    position: absolute;
+    margin-top: 40px;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+#ekstrakurikuler .carousel-control-prev,
+#ekstrakurikuler .carousel-control-next {
+    border: none;
+    border-radius: 30%;
+    width: 30px;
+    height: 30px;
+    background-color: #182856;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ekstrakurikuler .carousel-control-prev:hover,
+#ekstrakurikuler .carousel-control-next:hover {
+    border: none;
+    border-radius: 30%;
+    width: 30px;
+    height: 30px;
+    background-color: #3c7b46;
+}
+
+.card-program img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-program .overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    opacity: 0;
+    height: 50%;
+    transition: all ease-in-out 0.3s;
+    border-radius: 8px;
+}
+
+.card-program .overlay:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    width: 100%;
+    height: 300px;
+}
+
+.slide-ekskul .carousel-item {
+    flex: 0 0 32% !important;
+}
+
+.slide-ekskul {
+    position: relative;
+    z-index: 999 !important;
+}
+
+@media screen and (min-width: 1400px) {
+    .card-program img {
+        max-height: 300px;
+    }
+
+    #ekstrakurikuler .carousel-controls {
+        max-width: 70px;
+    }
+}
+
+.ekskul {
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+#ekstrakurikuler a {
+    text-decoration: none;
+}
+
+/* BERITA LANDING SECTION*/
+
+#berita img,
+.slide-ekskul img {
+    object-fit: cover;
+}
+
+#berita .berita-small-title,
+#berita .berita-big-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#berita .berita-small-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #080e1e;
+    margin-bottom: 20px;
+}
+
+#berita .berita-big-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #080e1e;
+}
+
+/* BERITA LANDING SECTION END*/
+
+/* PPDB LANFING SECTION */
+.ppdb-img {
+    width: 700px !important;
+}
+#PPDB .conten-banner {
+    top: 0;
+    transform: translate(-8%, -40%);
+}
+.judul-ppdb {
+    font-size: 42px;
+    font-weight: 500;
+}
+/* PPDB LANFING SECTION END */
+
+/* Responsiv */
+@media screen and (max-width: 430px) {
+    /* Responsiv ekstrakurikuler */
+    #ekstrakurikuler .header-ekskul {
+        margin-top: 40px;
+    }
+    .carousel-controls {
+        display: flex;
+        justify-content: space-between; /*Tombol terpisah di kanan dan kiri */
+        align-items: center;
+        margin-top: 3%;
+        width: 100%;
+        padding: 0 30px; /*Memberikan ruang di kedua sisi */
+        gap: 50px; /* Menambahkan jarak antar tombol */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        border: none;
+        border-radius: 30%;
+        width: 30px;
+        height: 30px;
+        background-color: #182856;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Responsive PPDB */
+    /* #PPDB .ppdb-conten {
+        transform: translateX(0px);
+        margin: 0;
+        padding: 0;
+    }
+    #PPDB .content-isi {
+        padding: 0px;
+        transform: translateX(-100px);
+    } */
+
+    /* profil */
+    .detail-guru {
+        /* margin-left: -50px; */
+        padding: 0px;
+    }
+    .header-detguru {
+        /* margin-top: 50px !important; */
+    }
+}
+
+@media screen and (min-width: 576px) {
+    /* Ekxtrakurikuler */
+    .slide-ekskul .carousel-inner {
+        display: flex;
+    }
+
+    .slide-ekskul .carousel-item {
+        display: block;
+        margin-right: 0;
+        /* flex: 0 0 70%; */
+    }
+
+    .card-program img {
+        height: 21vw;
+    }
+}
+
+.card-guru .card-img-top {
+    height: 316px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #eaebe5;
+}
+
+.card-detail-guru .card-img-top {
+    height: auto !important;
+    background-color: #eaebe5;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .card-guru .card-img-top {
+        height: 200px;
+    }
+    .col-guru .card-guru .overlay {
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0)
+        );
+        opacity: 1;
+        border-radius: 8px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .col-guru .card-guru .overlay {
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0)
+        );
+        opacity: 1;
+        border-radius: 8px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card-guru .card-img-top {
+        height: 370px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /* Dewan Guru */
+    .poto h2 {
+        font-size: 28px;
+    }
+
+    .col-guru .card-guru {
+        /* margin-bottom: 20px; */
+    }
+
+    .col-guru .card-img-top {
+        width: 100%;
+        /* height: auto; */
+    }
+
+    .col-guru h5 {
+        font-size: 10px;
+    }
+
+    .col-guru p {
+        font-size: 8px;
+    }
+
+    .pagination span {
+        font-size: 12px;
+        margin-top: 2px;
+    }
+}
+
+/* ==================== RESOPONSIVE ==================== */
+
+/* ==================== TABLET ==================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* ---------------- berita landing ---------------- */
+    .landing-berita-small-container {
+        flex: 0 0 50% !important;
+        padding-right: 15px !important;
+    }
+
+    .landing-berita-small-container img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .landing-berita-small-container .media-body p {
+        font-size: 12px !important;
+    }
+
+    .berita-small-title {
+        font-size: 16px !important;
+    }
+    /* ---------------- berita landing end---------------- */
+
+    /* ---------------- eksul --------------------- */
+    .program-item-img {
+        width: 40px !important;
+        height: 40px !important;
+        margin-right: 12px !important;
+    }
+    .program-item-title {
+        font-size: 16px !important;
+    }
+    #ekstrakurikuler .carousel-controls {
+        width: 70px !important;
+        margin-top: 3% !important;
+    }
+    .slide-ekskul .carousel-item {
+        flex: 0 0 41.5% !important;
+    }
+    #ekstrakurikuler {
+        padding: 50px 0 !important;
+        padding-bottom: 90px !important;
+    }
+
+    /* ---------------- PPDB end ----------------- */
+    .ppdb-img {
+        width: 700px !important;
+    }
+    #PPDB .conten-banner {
+        top: 0;
+        transform: translate(15%, -40%);
+    }
+    .judul-ppdb {
+        font-size: 42px;
+        font-weight: 500;
+    }
+    /* ---------------- PPDB end ----------------- */
+}
+
+/* ==================== TABLET END ==================== */
+
+/* ==================== MOBILE ==================== */
+@media (min-width: 320px) and (max-width: 767px) {
+    /* ---------------- berita landing ---------------- */
+    #berita {
+        padding: 30px 5px !important;
+    }
+    .landing-berita-small-container img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .landing-berita-small-container .media-body p {
+        font-size: 12px !important;
+    }
+
+    .berita-small-title {
+        font-size: 16px !important;
+    }
+
+    .berita-big-title {
+        font-size: 17px !important;
+        line-height: 25px !important;
+    }
+
+    #berita .berita-big-title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .berita-big-date {
+        font-size: 13px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .berita-more-btn {
+        display: none !important;
+    }
+
+    .berita-more-btn-mobile {
+        display: block !important;
+    }
+    /* ---------------- berita landing end---------------- */
+
+    /* ---------------- eksul --------------------- */
+    .program-item-img {
+        width: 45px !important;
+        height: 45px !important;
+        margin-right: 18px !important;
+    }
+    .program-item-title {
+        font-size: 20px !important;
+    }
+    #ekstrakurikuler .carousel-controls {
+        /* display: none !important; */
+        margin-top: 30px !important;
+    }
+    .slide-ekskul .carousel-item {
+        flex: 0 0 75% !important;
+    }
+    .slide-ekskul {
+        margin-bottom: 30px !important;
+    }
+    #ekstrakurikuler {
+        padding: 50px 6px !important;
+        padding-bottom: 90px !important;
+    }
+    .eksul-program-title {
+        margin-bottom: 30px !important;
+    }
+    .eksul-card-wrapper .card {
+        margin-bottom: 20px !important;
+    }
+    .header-eksul {
+        margin-top: 40px !important;
+    }
+    .card-program img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover !important;
+    }
+
+    .card-program {
+        width: 100%;
+        margin-left: 0px !important;
+    }
+
+    .slide-ekskul .carousel-inner .carousel-item {
+        display: flex;
+        margin: 0 !important;
+    }
+
+    .ekskul-more-btn {
+        display: none !important;
+    }
+
+    .ekskul-more-btn-mobile {
+        display: block !important;
+    }
+    /* ---------------- eksul end ----------------- */
+
+    /* ---------------- PPDB end ----------------- */
+    #PPDB {
+        padding: 30px 12px !important;
+    }
+    .ppdb-img {
+        width: 350px !important;
+    }
+    #PPDB .conten-banner {
+        top: 0;
+        transform: translate(2%, 20%);
+        position: relative !important;
+    }
+    #PPDB .content-isi {
+        transform: translateX(0px) !important;
+        padding: 12px !important;
+    }
+    .judul-ppdb {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    .mini-title-ppdb {
+        margin-top: 0 !important;
+        margin-bottom: 30px !important;
+    }
+    .ppdb-button {
+        width: 100%;
+        padding-top: 15px !important;
+        margin-top: 25px !important;
+        padding-bottom: 15px !important;
+    }
+    .ppdb-text-col {
+        z-index: 999 !important;
+    }
+    .ppdb-image-col {
+        margin-top: -60px !important;
+        z-index: 0 !important;
+    }
+    /* ---------------- PPDB end ----------------- */
+}
+
+/* ==================== MOBILE END ==================== */
+
+/* ==================== RESOPONSIVE END ==================== */

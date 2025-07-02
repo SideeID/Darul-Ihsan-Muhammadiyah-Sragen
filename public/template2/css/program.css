@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "SF UI";
+    src: url("fonts/SFUIText-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Dancing Script";
+    src: url("fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+}
+
+.program-page-title {
+    font-size: 56px !important;
+    font-weight: 700 !important;
+    color: #272727;
+}
+
+.program-page-subtitle {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    color: #272727;
+}
+
+.program-page-section {
+    min-height: calc(100vh - 106px) !important;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .program-page-section {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        min-height: calc(100vh - 241px) !important;
+    }
+    .program-page-title {
+        font-size: 42px !important;
+        margin-bottom: 20px !important;
+    }
+    .program-page-subtitle {
+        font-size: 14px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .program-page-title {
+        font-size: 40px !important;
+    }
+    .program-page-subtitle {
+        font-size: 16px !important;
+    }
+}

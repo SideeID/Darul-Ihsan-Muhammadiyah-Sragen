@@ -1,0 +1,270 @@
+/* NAVBAR BERITA */
+
+#header-berita .nav-pills .nav-link.active {
+    background: #3c7b46;
+    color: white !important;
+    border-radius: 8px;
+}
+
+#header-berita .nav-link {
+    color: #5a5f6d;
+    font-weight: 500;
+}
+
+#header-berita .nav-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hijau {
+    background-color: rgba(60, 123, 70, 1) !important;
+    color: #fff !important;
+}
+
+@media (min-width: 767px) {
+    .berita-nav-container a {
+        font-size: 12px;
+    }
+    .berita-nav-container .nav-link {
+        padding: 4px 10px !important;
+        border-radius: 6px !important;
+        margin-left: 2px !important;
+        margin-right: 2px !important;
+    }
+    .berita-nav-container {
+        padding: 2px !important;
+        border-radius: 6px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    #header-berita {
+        flex-direction: column;
+        padding-top: 50px !important;
+        align-items: start !important;
+    }
+
+    #header-berita .berita-nav-container {
+        border: none !important;
+    }
+
+    #header-berita .nav-scroll-container {
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+    }
+
+    #header-berita .nav-pills {
+        flex-direction: row !important;
+        display: flex !important;
+        width: 150% !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    #header-berita .nav-scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    #header-berita .nav-scroll-container {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #header-berita .nav-item {
+        display: inline-block !important;
+        margin-right: 6px !important;
+    }
+
+    #header-berita .warta-berita-title {
+        font-size: 28px !important;
+        padding-left: 10px !important;
+    }
+}
+
+/* NAVBAR BERITA END */
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner-text {
+    background: rgba(255, 255, 255, 1);
+    width: 100%;
+    max-width: 60%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 20px 0 0;
+}
+
+.banner-text-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.berita-title-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-date {
+    font-size: 14px;
+    margin-bottom: 0 !important;
+}
+
+.news-card {
+    display: flex;
+    flex-wrap: nowrap;
+    height: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.news-card img {
+    max-height: 180px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.news-card .card-body {
+    padding-left: 20px;
+}
+
+.news-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-news-lainnya-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-card .card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.news-card .badge {
+    font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+    .banner-text {
+        background: rgba(255, 255, 255, 1);
+        width: 100%;
+        max-width: 60%;
+        bottom: 0;
+        left: 0;
+        border-radius: 0 20px 0 0;
+    }
+    .banner-text h2 {
+        font-size: 15px;
+    }
+
+    .banner-text p {
+        font-size: 10px;
+    }
+    .news-card {
+        flex-direction: column;
+    }
+
+    .news-card img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .news-card .card-body {
+        padding-left: 0;
+    }
+}
+
+.bg-kabar {
+    background-color: rgba(235, 250, 244, 1);
+    color: rgba(37, 75, 43, 1);
+}
+
+/* ==================== RESOPONSIVE ==================== */
+
+/* ==================== TABLET ==================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* ---------------- berita ---------------- */
+    .card-news-lainnya-title {
+        font-size: 16px !important;
+    }
+    .banner-text-title {
+        font-size: 24px !important;
+    }
+    /* ---------------- berita end ---------------- */
+}
+
+/* ==================== TABLET END ==================== */
+
+/* ==================== MOBILE ==================== */
+@media (min-width: 320px) and (max-width: 767px) {
+    /* ---------------- berita ---------------- */
+    .banner-img {
+        height: 350px !important;
+    }
+    .banner-text {
+        background: rgba(255, 255, 255, 1);
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        position: relative !important;
+    }
+    .card-news-lainnya-title {
+        font-size: 16px !important;
+    }
+    .banner-text-title {
+        font-size: 28px !important;
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
+        -webkit-line-clamp: 3;
+    }
+
+    .berita-lainnya-container .news-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
+    .berita-lainnya-container .card-img-top {
+        width: 40% !important;
+        height: 125px !important;
+        border-radius: 8px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .berita-lainnya-container .admin-date,
+    .berita-lainnya-container .bg-kabar {
+        font-size: 11px !important;
+    }
+
+    .card-news-lainnya-title {
+        font-size: 14px !important;
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* ---------------- berita end ---------------- */
+}
+
+/* ==================== MOBILE END ==================== */
+
+/* ==================== RESOPONSIVE END ==================== */

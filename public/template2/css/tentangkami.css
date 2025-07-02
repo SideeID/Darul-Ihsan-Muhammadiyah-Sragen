@@ -1,0 +1,329 @@
+body {
+    background-color: #f5f6fa;
+}
+.btn-modal-primary {
+    background-color: #1763d3;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+.btn-modal-danger {
+    background-color: #d32246;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-modal-success {
+    background-color: #3c7b46;
+    color: #ffff;
+}
+
+.btn-outline-danger {
+    color: #f52d00;
+    background-color: #ffe1df;
+}
+.btn-outline-light {
+    color: #ffff;
+    background-color: #505968;
+}
+
+.btn-outline-secondary {
+    background-color: #fff;
+    border-color: #505968;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-dark {
+    background-color: rgba(21, 22, 25, 1);
+    color: white !important;
+}
+.btn-warning {
+    background-color: #f9bf39;
+    color: #080e1e !important;
+    font-weight: 600;
+}
+
+.form-judul {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.text-breadcumbs-active {
+    color: #254b2b;
+    font-size: 14px !important;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.text-breadcumbs {
+    color: var(--text-disabled, var(--placeholder, #898fa0));
+    font-size: 14px !important;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.tentangkami-card {
+    padding: 20px;
+    border: none;
+}
+
+.tentangkami-judul {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212122;
+}
+
+.tentangkami-subjudul {
+    font-size: 18px;
+    font-weight: 700;
+    color: #212122;
+}
+
+.tentangkami-subtext {
+    font-size: 12px;
+    font-weight: 500;
+    color: #080e1e;
+}
+
+.custom-alert {
+    z-index: 100;
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 75%;
+    width: 300px;
+    max-width: 700px;
+    margin: 10px auto;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert .alert-text {
+    flex-grow: 1;
+    padding-right: 40px;
+}
+.custom-alert .alert-text p {
+    font-size: 12px;
+}
+
+.custom-alert .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.alert-img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Gaya untuk setting date pada Flatpickr */
+.flatpickr-day.today:hover {
+    background-color: #3c7b46 !important;
+    color: white !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+    background-color: #3c7b46 !important;
+    color: white !important;
+    border-color: #3c7b46 !important;
+}
+
+/* Menghilangkan icon bawaan bootstrap untuk dropdown-toggle */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.btn-group input#datepicker {
+    padding-right: 0px;
+}
+
+.btn-group input#datepicker + img {
+    position: relative;
+    z-index: 2;
+    top: 12px;
+    right: 20px;
+}
+
+.btn-group .btn,
+.btn-group input#datepicker {
+    border: 1px solid #d6d8db;
+    background-color: #ffff;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+}
+
+.btn-group .btn:focus,
+.btn-group input#datepicker:focus {
+    border-color: #d6d8db;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Mengatur hover state */
+.btn-group .btn:hover,
+.btn-group input#datepicker:hover {
+    background-color: #f9f9f9;
+    border-color: #b8b9bd;
+}
+
+.btn-group input#datepicker {
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.tentangkami-search {
+    background-color: #efeff0;
+}
+.aksi-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 10px;
+}
+
+/* Style table */
+.table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.table thead th {
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+.table tbody td,
+.table tbody th {
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+}
+.table thead th:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    /* Radius kiri atas */
+}
+
+.table thead th:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    /* Radius kanan atas */
+}
+.status-dropdown {
+    padding: 8px;
+    border-radius: 8px;
+    width: 242px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.status-dropdown .dropdown-item {
+    padding: 10px 30px;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-dropdown .dropdown-item.active {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.status-dropdown .dropdown-item:not(.active) {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 12px 16px;
+}
+
+.status-dropdown .dropdown-item:hover {
+    background-color: black;
+    color: #ffff;
+    gap: 10px;
+}
+.img-preview .overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    opacity: 0;
+    height: 50%;
+    transition: all ease-in-out 0.3s;
+    border-radius: 8px;
+}
+
+.img-preview .overlay:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    height: 300px;
+}
+
+.badge-kuning {
+    font-size: 12px;
+    padding: 2px 8px 2px 6px;
+    border-radius: 5px;
+    background-color: #FFF9EA;
+    color: #524224;
+    height: 21px;
+    width: 51px;
+    gap: 6px;
+}
+
+.badge-hijau {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    background-color: #ECFDF3;
+    color: #027A48;
+    height: 21px;
+    width: 78px;
+    gap: 6px;
+}
+
+.aksi-button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d6d8db;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.aksi-button img {
+    width: 16px;
+    height: 16px;
+}
