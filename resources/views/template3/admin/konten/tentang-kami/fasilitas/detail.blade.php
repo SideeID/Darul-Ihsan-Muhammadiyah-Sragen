@@ -1,0 +1,436 @@
+@extends('admin.layouts.main')
+
+@section('style')
+    <style>
+        .form-control::placeholder {
+            font-size: 14px;
+            color: #151619;
+        }
+
+        /* Efek garis putus-putus */
+        .border-dashed {
+            border: 2px dashed #D6D8DB;
+            border-radius: 10px;
+            background-color: #F7F7F7;
+        }
+
+        .new-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .img-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .upload-text {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .detail-new {
+            font-size: 10px;
+            font-weight: 400;
+            color: #808080;
+            margin-top: -10px;
+        }
+
+        .browse-link {
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .form-check-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #666E7A;
+        }
+
+        .tentangkami-subtext {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .custom-alert {
+            display: none;
+        }
+
+        .custom-alert.show {
+            display: block;
+        }
+
+        .is-invalid {
+            border-color: #dc3545 !important;
+        }
+
+        .btn-simpan-fas {
+            width: 233px;
+            height: 40px;
+
+        }
+
+        .card-fasilitas {
+            height: 300px;
+            width: auto;
+        }
+
+        .card-data-detail .overlay {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+            opacity: 0;
+            height: 50%;
+            transition: all ease-in-out 0.3s;
+            border-radius: 8px;
+        }
+
+        .card-data-detail .overlay:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 1;
+            height: 300px;
+        }
+        .input-group {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .input-group .form-control {
+            border: none;
+            box-shadow: none;
+        }
+
+        .input-group .btn {
+            border: none;
+            border-left: 1px solid #ced4da;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+@endsection
+
+@section('content')
+    <div class="container-fluid p-3">
+        <div class="row">
+            <a href="{{ route('tentangkami.fasilitas') }}" class="tentangkami-subtext mb-4">
+                <img src="{{ asset('template2/img/row-left.svg') }}" class="me-2" alt="">Kembali
+            </a>
+        </div>
+        <div class="col-12">
+            <div class="card tentangkami-card">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="tentangkami-subjudul">Tambah Galeri</h5>
+                        <form id="uploadForm">
+                            <div class="row">
+                                <!-- Input Form Section (col-md-9) -->
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="inputjudul" class="form-label form-judul">Judul</label>
+                                        <input type="text" class="form-control" id="inputjudul"
+                                            placeholder="Asrama Santri">
+                                        <div class="invalid-feedback">Kolom judul wajib diisin!</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inputtanggal" class="form-label form-judul">Tanggal</label>
+                                        <!-- Date Picker Dropdown -->
+                                        <div class="input-group">
+                                            <input type="text" id="datepicker" class="form-control"
+                                                placeholder="Hari ini" style="cursor: pointer;" readonly>
+                                            <button class="btn btn-outline-secondary" type="button" id="datepicker-button"
+                                                style="border-left: none;">
+                                                <img src="{{ asset('template2/img/icon-calendar.svg') }}"
+                                                    alt="Dropdown Icon" style="width: 16px; height: 16px;">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Image Upload Section (col-md-3) -->
+                                <div class="col-md-6 d-flex flex-column mb-2">
+                                    <div class="card card-data-detail">
+                                        <img src="{{ asset('template2/assets/image/img-fasilitas1.jpeg') }}"
+                                            class="card-img-top img-fluid " alt="card-img-top">
+                                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 h-100">
+                                            <div class="position-absolute top-0 end-0 p-3">
+                                                <button class="btn btn-outline-light">Ganti</button>
+                                                <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-hapus-gambar"><img
+                                                        src="{{ asset('template2/img/icon-trash.svg') }}" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <p class="tentangkami-subtext">Gambar lainnya</p>
+                                <div class="col-md-4">
+                                    <div class="card card-data-detail">
+                                        <img src="{{ asset('template2/assets/image/img-fasilitas2.jpeg') }}"
+                                            class="card-img-top img-fluid card-fasilitas" alt="card-img-top">
+                                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 h-100">
+                                            <div class="position-absolute top-0 end-0 p-3">
+                                                <button class="btn btn-outline-light">Ganti</button>
+                                                <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-hapus-gambar"><img
+                                                        src="{{ asset('template2/img/icon-trash.svg') }}" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card card-data-detail">
+                                        <img src="{{ asset('template2/assets/image/img-fasilitas4.png') }}"
+                                            class="card-img-top img-fluid card-fasilitas" alt="card-img-top">
+                                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 h-100">
+                                            <div class="position-absolute top-0 end-0 p-3">
+                                                <button class="btn btn-outline-light">Ganti</button>
+                                                <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-hapus-gambar"><img
+                                                        src="{{ asset('template2/img/icon-trash.svg') }}" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card card-data-detail">
+                                        <img src="{{ asset('template2/assets/image/img-fasilitas3.png') }}"
+                                            class="card-img-top img-fluid card-fasilitas" alt="card-img-top">
+                                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 h-100">
+                                            <div class="position-absolute top-0 end-0 p-3">
+                                                <button class="btn btn-outline-light">Ganti</button>
+                                                <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-hapus-gambar"><img
+                                                        src="{{ asset('template2/img/icon-trash.svg') }}" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-md-flex justify-content-between align-items-center mt-4">
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">*Centang box untuk publish data
+                                        ke website</label>
+                                </div>
+                                <div>
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="btn btn-warning mt-auto btn-simpan-fas mt-auto">Simpan
+                                        Data</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div id="alertBatal" class="alert alert-danger custom-alert">
+        <div class="d-flex">
+            <div class="alert-img me-2">
+                <img src="{{ asset('template2/assets/image/Admin/info-circle.svg') }}" alt="">
+            </div>
+            <div class="alert-text">
+                <strong style="color: #D32246;">Permintaan Tidak Sesuai</strong>
+                <p class="m-0 text-secondary">Silahkan periksa kembali data anda!.
+                </p>
+            </div>
+            <button type="button" id="confirmBtnError" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+    </div>
+
+    <div id="alertDone-data" class="alert alert-success custom-alert">
+        <div class="d-flex">
+            <div class="alert-img me-2">
+                <img src="{{ asset('template2/img/icon-sukses-circle.svg') }}" alt="">
+            </div>
+            <div class="alert-text">
+                <strong style="color: #3C7B46;">Done</strong>
+                <p class="m-0 text-secondary">Data berhasil ditambahkan</p>
+            </div>
+            <button type="button" id="confirmBtnSuccess" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+    </div>
+
+    <div id="alertBerhasil" class="alert alert-success custom-alert">
+        <div class="d-flex">
+            <div class="alert-img me-2">
+                <img src="{{ asset('template2/img/icon-sukses-circle.svg') }}" alt="">
+            </div>
+            <div class="alert-text">
+                <strong style="color: #3C7B46;">Yeah</strong>
+                <p class="m-0 text-secondary">Perubahan data berhasil!</p>
+            </div>
+            <button type="button" id="confirmBtnSuccess" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+    </div>
+
+    <!-- Include Modal Components -->
+    @include('admin.components.modal-simpan-publish')
+    @include('admin.components.modal-tambah-data')
+@endsection
+
+@section('script')
+    <script>
+        // Js form
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('uploadForm');
+            const inputJudul = document.getElementById('inputjudul');
+            const inputTanggal = document.getElementById('inputtanggal');
+            const checkBox = document.getElementById('exampleCheck1');
+            const uploadInput = document.getElementById('upload-input');
+            const previewContainer = document.getElementById('previewContainer');
+
+            const alertBatal = document.getElementById('alertBatal');
+            const alertDone = document.getElementById('alertDone-data');
+            const alertBerhasil = document.getElementById('alertBerhasil');
+
+            const modalSimpanPublish = new bootstrap.Modal(document.getElementById('modal-simpanPublish'));
+            const modalTambahData = new bootstrap.Modal(document.getElementById('modal-tambahData'));
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                let valid = true;
+
+                // Validasi input Judul
+                if (inputJudul.value.trim() === '') {
+                    inputJudul.classList.add('is-invalid');
+                    valid = false;
+                } else {
+                    inputJudul.classList.remove('is-invalid');
+                }
+
+                // Validasi input tanggal
+                if (inputTanggal.value.trim() === '') {
+                    inputTanggal.classList.add('is-invalid');
+                    valid = false;
+                } else {
+                    inputTanggal.classList.remove('is-invalid');
+                }
+
+                // Jika data tidak valid, tampilkan alert
+                if (!valid) {
+                    alertBatal.classList.add('show');
+                    return;
+                }
+
+                // Tampilkan modal yang sesuai berdasarkan checkbox
+                if (checkBox.checked) {
+                    modalSimpanPublish.show();
+                } else {
+                    modalTambahData.show();
+                }
+            });
+
+            // Preview Gambar
+            document.getElementById('browse-btn').addEventListener('click', function() {
+                uploadInput.click();
+            });
+
+            uploadInput.addEventListener('change', function() {
+                const file = uploadInput.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewContainer.innerHTML = '<img src="' + e.target.result +
+                            '" class="img-fluid" alt="Preview">';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+
+        // Js alert Berhasil ditambahkan
+        document.addEventListener('DOMContentLoaded', function() {
+            const deleteButton = document.querySelector('#modal-tambahData .btn-modal-success');
+            const alertDone = document.getElementById('alertDone-data');
+
+            deleteButton.addEventListener('click', function() {
+                // Tampilkan alertDone
+                alertDone.style.display = 'block';
+
+                // modal konfirmasi hapus
+                const modal = document.getElementById('modal-tambahData');
+                const modalInstance = bootstrap.Modal.getInstance(modal);
+                modalInstance.hide();
+
+                setTimeout(function() {
+                    alertDone.style.display = 'none';
+                }, 3000);
+            });
+        });
+
+        // Js alert Berhasil dipublish
+        document.addEventListener('DOMContentLoaded', function() {
+            const deleteButton = document.querySelector('#modal-simpanPublish .btn-modal-primary');
+            const alertDone = document.getElementById('alertDone-data');
+
+            deleteButton.addEventListener('click', function() {
+                // Tampilkan alertDone
+                alertDone.style.display = 'block';
+
+                // modal konfirmasi hapus
+                const modal = document.getElementById('modal-simpanPublish');
+                const modalInstance = bootstrap.Modal.getInstance(modal);
+                modalInstance.hide();
+
+                setTimeout(function() {
+                    alertDone.style.display = 'none';
+                }, 3000);
+            });
+        });
+        // JS Setting Date
+        document.addEventListener("DOMContentLoaded", function() {
+            flatpickr("#datepicker", {
+                dateFormat: "d M Y",
+                defaultDate: "2024-09-04",
+                showMonths: 1,
+                locale: {
+                    firstDayOfWeek: 1,
+                    weekdays: {
+                        shorthand: ['Sn', 'Sl', 'Ra', 'Ka', 'Ju', 'Sa', 'Mg'],
+                        longhand: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+                            'Saturday'
+                        ],
+                    },
+                    months: {
+                        shorthand: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt',
+                            'Nov', 'Des'
+                        ],
+                        longhand: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
+                            'Agustus', 'September', 'Oktober', 'November', 'Desember'
+                        ],
+                    }
+                },
+                onChange: function(selectedDates, dateStr, instance) {
+                    document.getElementById('datepicker').value = dateStr;
+                },
+                onReady: function(selectedDates, dateStr, instance) {
+                    document.querySelector('.flatpickr-current-month .cur-year').style.display = 'none';
+                }
+            });
+
+            // Trigger datepicker on button click
+            document.getElementById('datepicker-button').addEventListener('click', function() {
+                document.getElementById('datepicker').click();
+            });
+        });
+    </script>
+@endsection
