@@ -1,0 +1,26 @@
+.ekstrakurikuler{
+    padding-inline: 10px;
+    padding-block: 10px;
+}
+
+.ekstrakurikuler h2{
+    color: #212122;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+/* Untuk link breadcrumb non-aktif */
+.ekstrakurikuler .breadcrumb-item a {
+    color: #898FA0 !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Untuk breadcrumb item aktif */
+.ekstrakurikuler .breadcrumb-item.active {
+    color: #3C7B46;
+    font-size: 14px;
+    font-weight: 500;
+}

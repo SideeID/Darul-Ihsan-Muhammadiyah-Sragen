@@ -1,0 +1,85 @@
+#kabar-sekolah .news-card {
+    border: none;
+    /* background-color: #f8f9fa; */
+}
+
+#kabar-sekolah .news-card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+#kabar-sekolah .news-card h5 {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+#kabar-sekolah .news-card p {
+    color: #6c757d;
+}
+
+#kabar-sekolah .news-card .card-body {
+    padding-left: 30px;
+}
+
+#kabar-sekolah .kabar-sekolah-card-title {
+    font-size: 18px !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.kabar-btn-lanjutbaca {
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+    display: inline-flex;
+    align-items: center;
+    color: #182856 !important;
+    border: 1px solid #898fa0 !important;
+    border-radius: 10px !important;
+}
+
+.kabar-btn-lanjutbaca:hover {
+    background-color: #f2f2f2f2 !important;
+}
+
+/* arsip */
+.arsip-section .list-group-item {
+    border-bottom: 1px solid #898fa0 !important;
+    border-left: 1px solid #898fa0 !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+}
+
+/* ==================== RESOPONSIVE ==================== */
+
+/* ==================== MOBILE ==================== */
+@media (min-width: 320px) and (max-width: 767px) {
+    .kabar-arsip-container {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    #kabar-sekolah .card-body {
+        padding-left: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    #kabar-sekolah .kabar-sekolah-card-title {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    #kabar-sekolah {
+        padding-top: 30px !important;
+    }
+}
+
+/* ==================== MOBILE END ==================== */
+
+/* ==================== RESOPONSIVE END ==================== */
