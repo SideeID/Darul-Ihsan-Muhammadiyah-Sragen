@@ -1,0 +1,10 @@
+.breadcrumb-item {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    color: #9EA3A9;
+}
+.breadcrumb-item.active{
+    color: #091E6F;
+    font-weight: 600;
+}

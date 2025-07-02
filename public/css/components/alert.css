@@ -1,0 +1,11 @@
+.alert {
+    border: none;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+}

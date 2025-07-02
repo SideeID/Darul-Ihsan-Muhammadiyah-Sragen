@@ -1,0 +1,14 @@
+.tanglet .table > :not(caption) > * > * p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    align-self: stretch;
+    overflow: hidden;
+    font-kerning: none;
+    font-feature-settings: "calt" off, "liga" off;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+.tanglet .form-tanglet .col-md-6:first-child {
+    border-right: 1px solid #f0f2f4;
+}

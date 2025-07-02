@@ -1,0 +1,12 @@
+.ads .form-switch .form-check-label {
+    padding-right: 50px;
+}
+.ads .placeholder {
+    border-radius: 8px;
+    background: #fcfcfc;
+    opacity: 1;
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+    cursor: auto;
+}

@@ -1,0 +1,198 @@
+/* form */
+/* .form-label {
+    margin: 0;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    left: 11px;
+    padding: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #55595c;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    z-index: 1;
+}
+.form-control,
+.form-select,
+html:not([dir="rtl"]) .form-select {
+    border: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #757575;
+}
+.form-control::placeholder {
+    color: #cdd0d3;
+}
+.form-control:disabled {
+    border: 1px solid #e6e6e6;
+    background: #ffffff;
+    color: #757575;
+}
+html:not([dir="rtl"])
+    .input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+        .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
+    border-left: none;
+}
+.form-select {
+    background-image: url("../../image/icon/select-arrow.svg");
+    background-size: 10px 8px;
+}
+.input-group-text {
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #212122;
+}
+html:not([dir="rtl"])
+    .input-group:not(.has-validation)
+    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(
+        .form-floating
+    ),
+html:not([dir="rtl"])
+    .input-group:not(.has-validation)
+    > .dropdown-toggle:nth-last-child(n + 3),
+html:not([dir="rtl"])
+    .input-group:not(.has-validation)
+    > .form-floating:not(:last-child)
+    > .form-control,
+html:not([dir="rtl"])
+    .input-group:not(.has-validation)
+    > .form-floating:not(:last-child)
+    > .form-select {
+    border-right: none;
+}
+.form-check {
+    margin-bottom: 12px;
+}
+.form-check:last-child {
+    margin-bottom: 0;
+}
+.form-check-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4f5f6f;
+}
+.form-check-input[type="checkbox"] {
+    border-radius: 4px;
+}
+.form-check-input {
+    background: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    width: 16px;
+    height: 16px;
+}
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 146, 63, 0.25);
+}
+.form-check-input:active {
+    filter: none;
+}
+.form-check-input:checked {
+    border-color: #00923F;
+    background-color: #00923F;
+}
+.form-check-input:checked[type="radio"] {
+    background-image: url("../../image/icon/input-radio-active.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.form-group.disabled .form-label {
+    background: transparent;
+}
+.form-group.disabled .input-group-text {
+    border: 1px solid #e6e6e6;
+    background: #f0f2f4;
+    color: #212122;
+} */
+.form-control:focus,
+input:focus {
+    outline: none;
+    border: 1px solid #0065FF;
+    box-shadow: none;
+}
+
+/* input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* input date */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url("../../image/icon/calendar.svg") no-repeat;
+    background-position: center center;
+    border-width: thin;
+}
+
+/* input image */
+.card-input-file {
+    height: 100px;
+    position: relative;
+}
+.card-input-file .label-upload-file {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    background: #ffffff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #9d9ea2;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.card-input-file input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-search {
+    gap: 12px;
+}
+.form-search .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.form-switch .form-check-input{
+    background-repeat: no-repeat;
+}
+.form-switch .form-check-input {
+    border-radius: 32px;
+}
+
+@media (max-width: 768px) {
+    .form-search {
+        gap: 24px;
+    }
+}

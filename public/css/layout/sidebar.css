@@ -1,0 +1,84 @@
+.sidebar {
+    background: #060313;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.01);
+}
+.sidebar-brand {
+    background: #060313;
+}
+.simplebar-content {
+    gap: 8px;
+}
+.sidebar-nav .nav-item {
+    padding: 0 16px;
+}
+.sidebar-nav .nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+.sidebar-nav .nav-link:hover {
+    background: #00923f4f;
+    color: rgba(255, 255, 255, 0.5);
+}
+.sidebar-nav .nav-link.active {
+    background: #00923f;
+    color: #ffffff;
+}
+.sidebar-nav .nav-group {
+    padding: 0 16px;
+}
+.sidebar-nav .nav-group-toggle::after {
+    background-image: url("../../image/icon/sidebar/dropdown-arrow.svg");
+}
+.sidebar-nav .nav-group .nav-group-toggle:hover::after {
+    background-image: url("../../image/icon/sidebar/dropdown-arrow.svg");
+}
+.sidebar-nav .nav-group.show {
+    background: #060313;
+}
+.sidebar-nav .nav-group.show .nav-group-toggle {
+    color: rgba(255, 255, 255, 0.5);
+}
+.sidebar-nav .nav-group.show .nav-group-toggle:hover {
+    background: #00923f4f;
+    color: rgba(255, 255, 255, 0.5);
+}
+.sidebar .dropdown-toggle::after {
+    border: none;
+    background-image: url("../../image/icon/sidebar/dropdown-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 8px;
+    width: 12px;
+    display: block;
+}
+.sidebar .nav-group-items .nav-link .nav-icon{
+    background-image: url("../../image/icon/sidebar/indicator.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sidebar .nav-group-items .nav-link.active .nav-icon{
+    background-image: url("../../image/icon/sidebar/indicator-active.svg");
+}
+.admin-avatar {
+    border: 2px solid #00923f;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+.admin-title {
+    font-size: 14px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 117.5px;
+    white-space: nowrap;
+}
+.admin-subtitle {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+}

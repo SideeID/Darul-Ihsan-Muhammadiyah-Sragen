@@ -1,0 +1,54 @@
+.top-menu {
+    border-radius: 12px;
+    overflow: auto;
+    white-space: nowrap;
+    max-width: 100%;
+}
+.top-menu .btn{
+    margin: 0 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #212122;
+    padding: 8px 20px;
+}
+.top-menu .btn:first-child{
+    margin-left: 0;
+}
+.top-menu .btn:last-child{
+    margin-right: 0;
+}
+.top-menu::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.top-menu::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+.top-menu::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 8px;
+}
+.top-menu::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+@media(max-width: 768px){
+    .top-menu::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+    .top-menu::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+    }
+}
+
+@media(max-width: 576px){
+    .top-menu::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+    .top-menu::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+    }
+}

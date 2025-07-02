@@ -1,0 +1,38 @@
+
+.status {
+    border-radius: 5px;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0 8px 0 7px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.status .indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    margin-right: 7px;
+}
+.status.status-success {
+    background-color: #ecfdf3;
+    color: #027a48;
+}
+.status.status-success .indicator {
+    background-color: #12b76a;
+}
+.status.status-warning {
+    background-color: #fffaeb;
+    color: #b86e00;
+}
+.status.status-warning .indicator {
+    background-color: #b86e00;
+}
+.status.status-danger {
+    background-color: #fff6ed;
+    color: #c4320a;
+}
+.status.status-danger .indicator {
+    background-color: #c4320a;
+}

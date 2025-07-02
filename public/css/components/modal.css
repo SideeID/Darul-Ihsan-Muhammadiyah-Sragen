@@ -1,0 +1,15 @@
+.modal .btn-close {
+    background-image: url("../../image/icon/close-modal.svg");
+    border-radius: 12px;
+    opacity: 1;
+}
+.w-40 {
+    width: 40% !important;
+}
+#modalFilter .form-range-text .d-flex hr {
+    width: 16px;
+    border-color: #0A0A0A;
+}
+#modalFilter .form-range-text .d-flex input{
+    width: calc(50% - 32px);
+}

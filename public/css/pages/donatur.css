@@ -1,0 +1,21 @@
+.donatur .card-transaksi {
+    border: none;
+    margin-bottom: 40px;
+}
+.donatur .card-transaksi .card-header {
+    height: 60px;
+    background: #009b4c;
+    border: 1px solid #009b4c;
+    border-radius: 10px 10px 0 0;
+}
+.donatur .card-transaksi .card-body {
+    border: 1px solid #bfbfbf;
+    border-top: 1px solid #009b4c;
+    border-radius: 0 0 10px 10px;
+}
+.donatur .card-transaksi h2 {
+    margin-top: 30px;
+}
+.donatur .card-transaksi hr {
+    border-top: 1px dashed #bfbfbf;
+}

@@ -1,0 +1,274 @@
+.dashboard .card-stats .col-lg-4{
+    border-right: 1px solid #E6E6E6;
+}
+.dashboard .card-stats .col-lg-4:last-child{
+    border-right: none;
+}
+.dashboard .card-stats h5{
+    margin-left: 28px;
+}
+.dashboard .card-stats .total-pendaftar{
+    background-image: url("../../image/total-pendaftar-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.dashboard .card-stats .pendaftar-haji{
+    background-image: url("../../image/pendaftar-haji-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.dashboard .card-stats .pendaftar-umroh{
+    background-image: url("../../image/pendaftar-umroh-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.dashboard .card-chart small{
+    font-size: 12px;
+}
+.dashboard .card-chart .form-select{
+    background-image: url("../../image/icon/select-arrow-danger.svg");
+    background-size: 10px 8px;
+    color: #212122;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    border: 1px solid #F0F2F4;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.01);
+    border-radius: 6px;
+    width: 112px;
+}
+.dashboard .card-chart p{
+    letter-spacing: 0.01em;
+    margin-right: 8px;
+}
+.dashboard .card-chart .chart-wrapper{
+    min-width: 1059px;
+    width: 100%;
+}
+
+.dashboard .card-notifikasi{
+    background-color: #E4262C;
+    background-image: url("../../image/bg-card-dashboard-2.svg"), url("../../image/bg-card-dashboard-1.svg");
+    background-repeat: no-repeat;
+    background-position: top right, top right;
+}
+.dashboard .card-notifikasi .card-body{
+    padding: 68px 24px;
+}
+.dashboard .card-notifikasi .badge{
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+}
+.dashboard .card-notifikasi h4{
+    margin-bottom: 40px;
+}
+.dashboard .card-notifikasi p{
+    margin-bottom: 40px;
+}
+.dashboard .card-notifikasi .btn{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.dashboard .card-main .row .row .card-statss .col-lg-4{
+    border-right: 1px solid #E6E6E6;
+}
+.dashboard .card-main .row .row .card-statss .col-lg-4:last-child{
+    border-right: none;
+}
+.dashboard .card-main .row .row .card-statss h5{
+    margin-left: 28px;
+}
+.dashboard .card-main .row .row .section-aksi .btn:first-child{
+    width: 140px;
+}
+.dashboard .card-main .row .row .section-aksi .btn:last-child{
+    width: 340px;
+}
+
+.dashboard .card-main .row .data .atas-tabel .col-lg-9{
+    display: flex;
+    flex-direction: row;
+}
+.dashboard table .status{
+    letter-spacing: 0.01em;
+    font-size: 12px;
+}
+.dashboard table .btn{
+    letter-spacing: 0.01em;
+    font-size: 12px;
+}
+.dashboard .chart-wrapper{
+    height: 300px;
+    width:450px;
+}
+
+.dashboard #filter{
+    gap: 12px 0;
+}
+
+.dashboard .penggajian-sekarang h5, .dashboard .penggajian-sebelumnya h5{
+    margin-left: 28px;
+}
+
+.dashboard.dashboard-lembaga .card-stats .penggajian{
+    background-image: url("../../image/penggajian-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.dashboard.dashboard-lembaga .card-stats .card-header{
+    margin-bottom: 42px;
+}
+.dashboard.dashboard-lembaga .card-stats .stats-penggajian{
+    margin-bottom: 66px;
+}
+.dashboard.dashboard-lembaga .card-stats .col-lg-6{
+    border-right: 1px solid #E6E6E6;
+}
+.dashboard.dashboard-lembaga .card-stats .col-lg-6:last-child{
+    border-right: none;
+}
+.dashboard.dashboard-lembaga #tableKomponen{
+    height: 256px;
+}
+
+@media(max-width: 768px){
+    .dashboard .card-stats .col-lg-4{
+        border-right: none;
+    }
+    .dashboard .card-stats h5{
+        margin-left: 28px;
+    }
+
+    .dashboard .card-notifikasi .card-body{
+        padding: 24px;
+    }
+    .dashboard .card-notifikasi h4{
+        margin-bottom: 8px;
+    }
+    .dashboard .card-notifikasi p{
+        margin-bottom: 24px;
+    }
+
+    .dashboard .card-main .row .row .section-aksi .btn:first-child{
+        width: 100%;
+    }
+    .dashboard .card-main .row .row .section-aksi .btn:last-child{
+        width: 200px;
+    }
+
+    .dashboard .card-main .row .data .atas-tabel .col-lg-9{
+        flex-direction: column;
+    }
+
+    .dashboard .card-main .row .data .atas-tabel .table-length{
+        padding-left: 0;
+    }
+    .dashboard .card-main .row .data .atas-tabel .lembaga{
+        margin-bottom: 10px;
+    }
+    .dashboard .card-main .row .data .atas-tabel .bulan{
+        margin-bottom: 10px;
+    }
+    .dashboard .card-main .row .data .atas-tabel .jenjang{
+        margin-bottom: 10px;
+    }
+    .dashboard .card-main .row .data .atas-tabel .tahun{
+        margin-bottom: 10px;
+    }
+
+    .dashboard.dashboard-lembaga .card-stats .col-lg-6{
+        border-right: none;
+    }
+    .dashboard.dashboard-lembaga .penggajian .card-header {
+        margin-bottom: 32px;
+    }
+    .dashboard.dashboard-lembaga .penggajian .stats-penggajian {
+        margin-bottom: 46px;
+    }
+}
+
+@media(max-width: 1024px){
+    .dashboard .card-main .row .row .section-aksi .btn:first-child{
+        width: 100%;
+    }
+    .dashboard .card-main .row .row .section-aksi .btn:last-child{
+        width: 220px;
+    }
+}
+
+@media(min-width: 1439px) and (max-width: 4000px){
+    .dashboard .card-main .row .row .section-aksi .btn:last-child{
+        width: 360px;
+    }
+}
+
+@media(max-width: 576px){
+    .dashboard .card-notifikasi h4{
+        margin-bottom: 16px;
+    }
+    .dashboard .card-notifikasi p{
+        margin-bottom: 24px;
+    }
+    .dashboard .card-notifikasi .btn{
+        font-size: 14px;
+    }
+
+    .dashboard .card-main .row .row .status{
+        margin-left: 10px;
+    }
+    .dashboard .card-main .row .row .section-aksi .btn:first-child{
+        width: 100px;
+    }
+    .dashboard .card-main .row .row .section-aksi .btn:last-child{
+        width: 240px;
+    }
+    .dashboard .card-main .row .row .section-aksi{
+        margin-bottom: 10px;
+    }
+
+    .dashboard .card-main .row .data .atas-tabel .col-lg-9{
+        flex-direction: column;
+    }
+    .dashboard .card-main .row .data .atas-tabel .table-length{
+        padding-left: 0;
+        margin-bottom: 16px;
+    }
+    .dashboard .card-main .row .data .atas-tabel .lembaga{
+        margin-bottom: 16px;
+    }
+    .dashboard .card-main .row .data .atas-tabel .bulan{
+        margin-bottom: 16px;
+    }
+    .dashboard .card-main .row .data .atas-tabel .jenjang{
+        margin-bottom: 16px;
+    }
+    .dashboard .card-main .row .data .atas-tabel .tahun{
+        margin-bottom: 16px;
+    }
+
+    .dashboard .card-main .row .row .col-lg-8 .card-statss{
+        margin-left: 30px;
+    }
+    .dashboard .card-main .row .row .card-statss .col-lg-4{
+        border-right: none;
+    }
+    .dashboard .card-main .row .row .col-lg-8 .button-status{
+        margin-left: 10px;
+    }
+}
+
+.img-preview {
+    position: relative;
+}
+
+.label-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

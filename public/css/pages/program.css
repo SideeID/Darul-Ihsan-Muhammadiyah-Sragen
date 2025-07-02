@@ -1,0 +1,12 @@
+.koin.program #modalVerifikasi .form-check-input[type="radio"] {
+    border-radius: 4px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+}
+.koin.program #modalVerifikasi .form-check-input:checked[type="radio"] {
+    border: 1px solid #009b4c;
+    background: #f9f5ff;
+    background-image: url("../../image/icon/icon-check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}

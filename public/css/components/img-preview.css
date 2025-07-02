@@ -1,0 +1,33 @@
+.img-preview {
+    border-radius: 4px;
+    border: 2px solid #F2F4F7;
+    background: #f7f7f7;
+    height: 100%;
+    position: relative;
+    height: 304px;
+    height: 302px;
+    margin: auto;
+}
+#img_preview, .img-preview .preview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* .img-preview label {
+    padding: 32px 24px 24px 24px;
+    position: absolute;
+    top: 0;
+} */
+.img-preview label .label-content{
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+    /* .img-preview {
+        width: 195px;
+        height: 195px;
+    } */
+    .img-preview label {
+        padding: 24px;
+    }
+}
